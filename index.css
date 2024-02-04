@@ -2,13 +2,18 @@
 /* CUSTOM PROPERTIES */
 /* --------------- */
 
-/* font-families */
 :root {
+  /* font-families */
   --ff-sans-serif: "Poppins", sans-serif;
-}
 
-body {
-  font-family: var(--ff-sans-serif);
+  /* colors */
+  --clr-purple: 259, 100%, 65%;
+  --clr-light-red: 0, 100%, 67%;
+  --clr-white: 0, 0%, 100%;
+  --clr-off-white: 0, 0%, 94%;
+  --clr-light-grey: 0, 0%, 86%;
+  --clr-smokey-grey: 0, 0%, 86%;
+  --clr-off-black: 0, 0%, 8%;
 }
 
 /* --------------- */
@@ -58,7 +63,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -75,11 +80,78 @@ ol {
   margin: 0;
 }
 
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* --------------- */
 /* UTILITY CLASSES */
 /* --------------- */
 
 /* typography */
+.ff-san-serif {
+  font-family: var(--ff-sans-serif);
+}
+
 .uppercase {
   text-transform: uppercase;
+}
+
+/* colors */
+.bg-purple {
+  background-color: hsl(var(--clr-purple));
+}
+.bg-light-red {
+  background-color: hsl(var(--clr-light-red));
+}
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
+.bg-off-white {
+  background-color: hsl(var(--clr-off-white));
+}
+.bg-light-grey {
+  background-color: hsl(var(--clr-light-grey));
+}
+.bg-smokey-grey {
+  background-color: hsl(var(--clr-smokey-grey));
+}
+.bg-off-black {
+  background-color: hsl(var(--clr-off-black));
+}
+
+.text-purple {
+  color: hsl(var(--clr-purple));
+}
+.text-light-red {
+  color: hsl(var(--clr-light-red));
+}
+.text-white {
+  color: hsl(var(--clr-white));
+}
+.text-off-white {
+  color: hsl(var(--clr-off-white));
+}
+.text-light-grey {
+  color: hsl(var(--clr-light-grey));
+}
+.text-smokey-grey {
+  color: hsl(var(--clr-smokey-grey));
+}
+.text-off-black {
+  color: hsl(var(--clr-off-black));
+}
+
+/* --------------- */
+
+body {
+  font-family: var(--ff-sans-serif);
 }
