@@ -1,0 +1,85 @@
+/* --------------- */
+/* CUSTOM PROPERTIES */
+/* --------------- */
+
+/* font-families */
+:root {
+  --ff-sans-serif: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--ff-sans-serif);
+}
+
+/* --------------- */
+/* RESET */
+/* --------------- */
+
+/* Box sizing */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/* images */
+img,
+picture {
+  max-width: 100%;
+}
+
+/* form elements */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Hide Arrows From Input Number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* button*/
+button {
+  cursor: pointer;
+}
+
+/* lists */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* --------------- */
+/* UTILITY CLASSES */
+/* --------------- */
+
+/* typography */
+.uppercase {
+  text-transform: uppercase;
+}
