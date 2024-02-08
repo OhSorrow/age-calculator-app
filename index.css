@@ -197,8 +197,7 @@ input {
   caret-color: hsl(var(--clr-purple));
 }
 
-input:focus-within,
-input:hover {
+input:focus-within {
   outline: none;
   border-color: hsl(var(--clr-purple));
 }
