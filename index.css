@@ -219,7 +219,7 @@ form {
 button {
   border: none;
   border-radius: 50%;
-  padding: 1rem;
+  padding: 0 1rem;
   aspect-ratio: 1/1;
   margin-top: 2rem;
   z-index: 2;
@@ -241,7 +241,7 @@ button:focus {
   background-color: hsl(var(--clr-light-grey));
   height: 1px;
   position: absolute;
-  bottom: 1.85rem;
+  bottom: 2rem;
   z-index: 1;
 }
 
