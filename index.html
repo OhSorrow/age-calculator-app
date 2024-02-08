@@ -18,6 +18,7 @@
     <!-- link to my css -->
     <link rel="stylesheet" href="./index.css" />
     <title>Age calculator app</title>
+    <script src="script.js" defer></script>
   </head>
   <body class="flex bg-light-grey">
     <div class="container bg-white">
@@ -27,7 +28,13 @@
             <label for="day" class="uppercase text-smokey-grey letter-spacing-4"
               >day</label
             >
-            <input type="number" id="day" name="day" class="text-off-black" />
+            <input
+              type="tel"
+              id="day"
+              name="day"
+              maxlength="2"
+              class="text-off-black"
+            />
           </li>
           <li>
             <label
@@ -36,9 +43,10 @@
               >month</label
             >
             <input
-              type="number"
+              type="tel"
               id="month"
               name="month"
+              maxlength="2"
               class="text-off-black"
             />
           </li>
@@ -48,7 +56,13 @@
               class="uppercase text-smokey-grey letter-spacing-4"
               >year</label
             >
-            <input type="number" id="year" name="year" class="text-off-black" />
+            <input
+              type="tel"
+              id="year"
+              name="year"
+              maxlength="4"
+              class="text-off-black"
+            />
           </li>
         </ul>
         <button type="button" class="flex">

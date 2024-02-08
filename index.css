@@ -197,7 +197,7 @@ input {
   caret-color: hsl(var(--clr-purple));
 }
 
-input:focus,
+input:focus-within,
 input:hover {
   outline: none;
   border-color: hsl(var(--clr-purple));
@@ -230,6 +230,7 @@ button {
 button:hover,
 button:focus {
   background-color: hsl(var(--clr-off-black));
+  outline: hsl(var(--clr-purple)) solid 2px;
 }
 
 .submit-icon {
