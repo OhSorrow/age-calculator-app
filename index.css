@@ -6,13 +6,18 @@
   /* font-families */
   --ff-sans-serif: "Poppins", sans-serif;
 
+  /* font-weight */
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+
   /* colors */
   --clr-purple: 259, 100%, 65%;
   --clr-light-red: 0, 100%, 67%;
   --clr-white: 0, 0%, 100%;
   --clr-off-white: 0, 0%, 94%;
   --clr-light-grey: 0, 0%, 86%;
-  --clr-smokey-grey: 0, 0%, 86%;
+  --clr-smokey-grey: 0, 1%, 44%;
   --clr-off-black: 0, 0%, 8%;
 }
 
@@ -96,9 +101,32 @@ ol {
 /* UTILITY CLASSES */
 /* --------------- */
 
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
 /* typography */
 .ff-san-serif {
   font-family: var(--ff-sans-serif);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+.fw-extra-bold {
+  font-weight: var(--fw-extra-bold);
+}
+
+.italic {
+  font-style: italic;
+}
+
+.letter-spacing-4 {
+  letter-spacing: 4px;
 }
 
 .uppercase {
@@ -154,4 +182,69 @@ ol {
 
 body {
   font-family: var(--ff-sans-serif);
+  min-height: 100vh;
+  align-items: center;
+}
+
+input {
+  margin-top: 0.25rem;
+  font-size: 24px;
+  width: 6rem;
+  height: 3.75rem;
+  padding: 1.2rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 2px solid hsl(var(--clr-light-grey));
+  caret-color: hsl(var(--clr-purple));
+}
+
+input:focus,
+input:hover {
+  outline: none;
+  border-color: hsl(var(--clr-purple));
+}
+
+.container {
+  border-radius: 1.75rem 1.75rem 5rem;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  max-width: 95%;
+}
+
+form {
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+button {
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  aspect-ratio: 1/1;
+  margin-top: 2rem;
+  z-index: 2;
+  background-color: hsl(var(--clr-purple));
+}
+
+button:hover,
+button:focus {
+  background-color: hsl(var(--clr-off-black));
+}
+
+.submit-icon {
+  width: 1.75rem;
+}
+
+.line {
+  display: block;
+  width: 100%;
+  background-color: hsl(var(--clr-light-grey));
+  height: 1px;
+  position: absolute;
+  bottom: 1.85rem;
+  z-index: 1;
+}
+
+p {
+  font-size: 3.7rem;
 }
