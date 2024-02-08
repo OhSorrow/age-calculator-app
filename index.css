@@ -227,10 +227,12 @@ button {
   align-items: center;
 }
 
-button:hover,
+button:hover {
+  background-color: hsl(var(--clr-off-black));
+}
 button:focus {
   background-color: hsl(var(--clr-off-black));
-  outline: hsl(var(--clr-purple)) solid 2px;
+  outline: hsl(var(--clr-purple)) solid 2.5px;
 }
 
 .submit-icon {
