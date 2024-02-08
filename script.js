@@ -7,9 +7,9 @@ for (let i = 0; i < inputs.length; i++) {
     const currentLength = this.value.length;
 
     if (currentLength >= maxLength) {
-      // if it's the last input, focus the button
+      // if it's the last input, do nothing
       if (i === inputs.length - 1) {
-        document.querySelector("button").focus();
+        return;
       } else {
         inputs[i + 1].focus();
         // Set cursor at the start position
@@ -65,4 +65,5 @@ for (let i = 0; i < inputs.length; i++) {
       );
     }
   });
+  // if Enter pressed on the 
 }
