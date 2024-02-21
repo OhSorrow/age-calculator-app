@@ -251,3 +251,13 @@ button:focus {
 p {
   font-size: 3.7rem;
 }
+
+.emptyErrorInput,
+.emptyErrorInput:focus {
+  border-color: hsl(var(--clr-light-red));
+}
+
+.emptyErrorText {
+  font-size: 12px;
+  visibility: hidden;
+}

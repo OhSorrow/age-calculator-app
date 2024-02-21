@@ -1,4 +1,6 @@
 const inputs = document.querySelectorAll("input");
+const emptyErrorText = document.querySelectorAll(".emptyErrorText");
+const labels = document.querySelectorAll("label");
 
 inputs.forEach((input, i) => {
   inputs[i].addEventListener("input", function () {
@@ -42,7 +44,10 @@ inputs.forEach((input, i) => {
       event.preventDefault();
       jumpToInput(i - 1, inputs[i - 1].value.length);
     }
-});
+    if (event.key === "Enter") {
+      handleEmptyInputError();
+    }
+  });
 });
 
 function jumpToInput(inputIndex, cursorPosition) {
@@ -53,4 +58,18 @@ function jumpToInput(inputIndex, cursorPosition) {
 }
 function setCursorPosition(input, position) {
   input.setSelectionRange(position, position);
+}
+
+function handleEmptyInputError() {
+  inputs.forEach((input, index) => {
+    if (input.value === "") {
+      input.classList.add("emptyErrorInput");
+      emptyErrorText[index].style.visibility = "visible";
+      labels[index].style.color = "hsl(var(--clr-light-red))";
+    } else {
+      input.classList.remove("emptyErrorInput");
+      emptyErrorText[index].style.visibility = "hidden";
+      labels[index].style.color = "hsl(var(--clr-smokey-grey))";
+    }
+  });
 }
