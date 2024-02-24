@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./index.css" />
     <title>Age calculator app</title>
     <script src="handleInputs.js" defer></script>
+    <script src="date.js" defer></script>
   </head>
   <body class="flex bg-light-grey">
     <div class="container bg-white">
@@ -35,9 +36,9 @@
               maxlength="2"
               class="text-off-black"
             />
-            <p class="emptyErrorText italic text-light-red"
-              >This field is required</p
-            >
+            <p class="emptyErrorText italic text-light-red">
+              This field is required
+            </p>
           </li>
           <li>
             <label
@@ -52,9 +53,9 @@
               maxlength="2"
               class="text-off-black"
             />
-            <p class="emptyErrorText italic text-light-red"
-              >This field is required</p
-            >
+            <p class="emptyErrorText italic text-light-red">
+              This field is required
+            </p>
           </li>
           <li>
             <label
@@ -69,12 +70,12 @@
               maxlength="4"
               class="text-off-black"
             />
-            <p class="emptyErrorText italic text-light-red"
-              >This field is required</p
-            >
+            <p class="emptyErrorText italic text-light-red">
+              This field is required
+            </p>
           </li>
         </ul>
-        <button type="button" class="flex">
+        <button onclick="showBirthDate()" type="button" class="flex">
           <img
             class="submit-icon"
             src="./assets/images/icon-arrow.svg"
@@ -85,13 +86,13 @@
       </form>
       <section>
         <p class="fw-extra-bold italic">
-          <span class="text-purple">-- </span> years
+          <span id="ageYear" class="text-purple">-- </span> years
         </p>
         <p class="fw-extra-bold italic">
-          <span class="text-purple">--</span> months
+          <span id="ageMonth" class="text-purple">--</span> months
         </p>
         <p class="fw-extra-bold italic">
-          <span class="text-purple">-- </span> days
+          <span id="ageDay" class="text-purple">-- </span> days
         </p>
       </section>
     </div>

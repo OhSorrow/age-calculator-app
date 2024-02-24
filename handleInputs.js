@@ -43,6 +43,7 @@ inputs.forEach((input, i) => {
       jumpToInput(i - 1, inputs[i - 1].value.length);
     } else if (event.key === "Enter") {
       handleEmptyInputError();
+      showBirthDate();
     }
   });
 });
