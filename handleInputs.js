@@ -31,10 +31,8 @@ inputs.forEach((input, i) => {
       inputs[i].selectionStart === 0
     ) {
       jumpToInput(i - 1, inputs[i - 1].value.length);
-    }
-
-    // if user pressed backspace key, and the cursor position was at the 0, move to the previous input
-    if (
+    } else if (
+      // if user pressed backspace key, and the cursor position was at the 0, move to the previous input
       event.key === "Backspace" &&
       inputs[i].selectionStart === 0 &&
       inputs[i].selectionEnd === 0 &&
@@ -43,8 +41,7 @@ inputs.forEach((input, i) => {
       // prevent the default backspace behavior
       event.preventDefault();
       jumpToInput(i - 1, inputs[i - 1].value.length);
-    }
-    if (event.key === "Enter") {
+    } else if (event.key === "Enter") {
       handleEmptyInputError();
     }
   });
