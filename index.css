@@ -239,9 +239,13 @@ p {
   font-size: 3.5rem;
 }
 
-.emptyErrorInput,
-.emptyErrorInput:focus {
+.invalidInput,
+.invalidInput:focus {
   border-color: hsl(var(--clr-light-red));
+}
+
+.invalidLabel{
+  color: hsl(var(--clr-light-red));
 }
 
 .emptyErrorText {

@@ -42,7 +42,6 @@ inputs.forEach((input, i) => {
       event.preventDefault();
       jumpToInput(i - 1, inputs[i - 1].value.length);
     } else if (event.key === "Enter") {
-      handleEmptyInputError();
       showBirthDate();
     }
   });
@@ -56,18 +55,4 @@ function jumpToInput(inputIndex, cursorPosition) {
 }
 function setCursorPosition(input, position) {
   input.setSelectionRange(position, position);
-}
-
-function handleEmptyInputError() {
-  inputs.forEach((input, index) => {
-    if (input.value === "") {
-      input.classList.add("emptyErrorInput");
-      emptyErrorText[index].style.visibility = "visible";
-      labels[index].style.color = "hsl(var(--clr-light-red))";
-    } else {
-      input.classList.remove("emptyErrorInput");
-      emptyErrorText[index].style.visibility = "hidden";
-      labels[index].style.color = "hsl(var(--clr-smokey-grey))";
-    }
-  });
 }

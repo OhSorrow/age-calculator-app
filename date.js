@@ -1,34 +1,31 @@
-const dayField = document.getElementById("day");
-const monthField = document.getElementById("month");
-const yearField = document.getElementById("year");
 const ageYear = document.getElementById("ageYear");
 const ageMonth = document.getElementById("ageMonth");
 const ageDay = document.getElementById("ageDay");
 
-function getBirthDate() {
-  const birthDate = new Date(
-    yearField.value,
-    monthField.value - 1,
-    dayField.value
-  );
-  return birthDate;
-}
-
 function calculateAge() {
-  const birthDate = getBirthDate();
-  const currentDate = new Date();
-  const ageInMilliseconds = currentDate - birthDate;
-  const ageDate = new Date(ageInMilliseconds);
-  const year = ageDate.getFullYear() - 1970;
-  const month = ageDate.getMonth();
-  const day = ageDate.getDate() - 2;
+  if (verifyInput() !== false) {
+    const birthDate = verifyInput();
+    const currentDate = new Date();
+    const ageInMilliseconds = currentDate - birthDate;
+    const ageDate = new Date(ageInMilliseconds);
+    const years = ageDate.getFullYear() - 1970;
+    const months = ageDate.getMonth();
+    const days = ageDate.getDate() - 2;
 
-  return { years: year, months: month, days: day };
+    return { years: years, months: months, days: days };
+  }
+  return false;
 }
 
 function showBirthDate() {
-  const age = calculateAge();
-  ageYear.textContent = age.years;
-  ageMonth.textContent = age.months;
-  ageDay.textContent = age.days;
+  if (calculateAge() !== false) {
+    const age = calculateAge();
+    ageYear.textContent = age.years;
+    ageMonth.textContent = age.months;
+    ageDay.textContent = age.days;
+  } else {
+    ageYear.textContent = "--";
+    ageMonth.textContent = "--";
+    ageDay.textContent = "--";
+  }
 }

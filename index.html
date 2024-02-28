@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./index.css" />
     <title>Age calculator app</title>
     <script src="handleInputs.js" defer></script>
+    <script src="verifyInput.js" defer></script>
     <script src="date.js" defer></script>
   </head>
   <body class="flex bg-light-grey">
@@ -26,7 +27,7 @@
       <form class="flex">
         <ul class="flex">
           <li>
-            <label for="day" class="uppercase text-smokey-grey letter-spacing-4"
+            <label id="dayLabel" for="day" class="uppercase text-smokey-grey letter-spacing-4"
               >day</label
             >
             <input
@@ -36,12 +37,12 @@
               maxlength="2"
               class="text-off-black"
             />
-            <p class="emptyErrorText italic text-light-red">
-              This field is required
+            <p id="dayError" class="emptyErrorText italic text-light-red">
+              This is error message!
             </p>
           </li>
           <li>
-            <label
+            <label id="monthLabel"
               for="month"
               class="uppercase text-smokey-grey letter-spacing-4"
               >month</label
@@ -53,12 +54,11 @@
               maxlength="2"
               class="text-off-black"
             />
-            <p class="emptyErrorText italic text-light-red">
-              This field is required
+            <p id="monthError" class="emptyErrorText italic text-light-red">
             </p>
           </li>
           <li>
-            <label
+            <label id="yearLabel"
               for="year"
               class="uppercase text-smokey-grey letter-spacing-4"
               >year</label
@@ -70,8 +70,7 @@
               maxlength="4"
               class="text-off-black"
             />
-            <p class="emptyErrorText italic text-light-red">
-              This field is required
+            <p id="yearError" class="emptyErrorText italic text-light-red">
             </p>
           </li>
         </ul>
