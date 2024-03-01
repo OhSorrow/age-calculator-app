@@ -16,9 +16,11 @@ function verifyInput() {
 
   if (isInputEmpty()) {
     isValid = false;
+    return false;
   }
   if (!isInputANumber()) {
     isValid = false;
+    return false;
   }
   if (!isMonthValid()) {
     isValid = false;
@@ -102,7 +104,6 @@ function isDateInFuture() {
       showError(yearField, yearLabel, yearError, "Must be in the past");
       return true;
     } else {
-      hideError(yearField, yearLabel, yearError);
       return false;
     }
   } else {
