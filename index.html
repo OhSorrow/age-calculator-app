@@ -27,11 +27,15 @@
       <form class="flex">
         <ul class="flex">
           <li>
-            <label id="dayLabel" for="day" class="uppercase text-smokey-grey letter-spacing-4"
+            <label
+              id="dayLabel"
+              for="day"
+              class="uppercase text-smokey-grey letter-spacing-4"
               >day</label
             >
             <input
               type="tel"
+              placeholder="DD"
               id="day"
               name="day"
               maxlength="2"
@@ -42,36 +46,38 @@
             </p>
           </li>
           <li>
-            <label id="monthLabel"
+            <label
+              id="monthLabel"
               for="month"
               class="uppercase text-smokey-grey letter-spacing-4"
               >month</label
             >
             <input
               type="tel"
+              placeholder="MM"
               id="month"
               name="month"
               maxlength="2"
               class="text-off-black"
             />
-            <p id="monthError" class="emptyErrorText italic text-light-red">
-            </p>
+            <p id="monthError" class="emptyErrorText italic text-light-red"></p>
           </li>
           <li>
-            <label id="yearLabel"
+            <label
+              id="yearLabel"
               for="year"
               class="uppercase text-smokey-grey letter-spacing-4"
               >year</label
             >
             <input
               type="tel"
+              placeholder="YYYY"
               id="year"
               name="year"
               maxlength="4"
               class="text-off-black"
             />
-            <p id="yearError" class="emptyErrorText italic text-light-red">
-            </p>
+            <p id="yearError" class="emptyErrorText italic text-light-red"></p>
           </li>
         </ul>
         <button onclick="showBirthDate()" type="button" class="flex">
