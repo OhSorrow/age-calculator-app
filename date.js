@@ -10,7 +10,7 @@ function calculateAge() {
     const ageDate = new Date(ageInMilliseconds);
     const years = ageDate.getFullYear() - 1970;
     const months = ageDate.getMonth();
-    const days = ageDate.getDate() - 2;
+    const days = ageDate.getDate() - 1;
 
     return { years: years, months: months, days: days };
   }
