@@ -20,9 +20,6 @@ function verifyInput() {
   if (!isInputANumber()) {
     isValid = false;
   }
-  if (isYearInFuture()) {
-    isValid = false;
-  }
   if (!isMonthValid()) {
     isValid = false;
   }
@@ -30,6 +27,9 @@ function verifyInput() {
     isValid = false;
   }
   if (!isDateValid()) {
+    isValid = false;
+  }
+  if (isDateInFuture()) {
     isValid = false;
   }
 
@@ -89,12 +89,23 @@ function isMonthValid() {
     return true;
   }
 }
-function isYearInFuture() {
-  if (yearField.value > currentDate.getFullYear()) {
-    showError(yearField, yearLabel, yearError, "Must be in the past");
-    return true;
+function isDateInFuture() {
+  if (monthField.value >= 1 && monthField.value <= 12 && dayField.value >= 1 && dayField.value <= 31) {
+    const selectedDate = new Date(
+      yearField.value,
+      monthField.value - 1,
+      dayField.value
+    );
+    if (selectedDate > currentDate) {
+      showError(dayField, dayLabel, dayError, "");
+      showError(monthField, monthLabel, monthError, "");
+      showError(yearField, yearLabel, yearError, "Must be in the past");
+      return true;
+    } else {
+      hideError(yearField, yearLabel, yearError);
+      return false;
+    }
   } else {
-    hideError(yearField, yearLabel, yearError);
     return false;
   }
 }
