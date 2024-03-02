@@ -298,4 +298,7 @@ p {
   p {
     font-size: 4.25rem;
   }
+  .line {
+    bottom: 2.5rem;
+  }
 }
