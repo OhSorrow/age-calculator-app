@@ -257,17 +257,18 @@ p {
   color: hsl(var(--clr-light-red));
 }
 
-.emptyErrorText {
+.error-text {
   font-size: 12px;
+  min-height: 37px;
   visibility: hidden;
 }
 
-section p:first-child {
+.age-section p:first-child {
   position: relative;
   top: 1.5rem;
 }
 
-section p:last-child {
+.age-section p:last-child {
   position: relative;
   top: -1.5rem;
 }
