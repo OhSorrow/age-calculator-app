@@ -244,10 +244,6 @@ button:focus {
   z-index: 1;
 }
 
-p {
-  font-size: 3.5rem;
-}
-
 .invalidInput,
 .invalidInput:focus {
   border-color: hsl(var(--clr-light-red));
@@ -261,6 +257,10 @@ p {
   font-size: 12px;
   min-height: 37px;
   visibility: hidden;
+}
+
+.age-section p {
+  font-size: 3.5rem;
 }
 
 .age-section p:first-child {
@@ -282,6 +282,10 @@ p {
     padding: 0 1.25rem;
     align-self: end;
   }
+  .age-section p{
+    font-size: 4rem;
+  
+  }
 }
 /* Desktop layout */
 @media (min-width: 768px) {
@@ -295,8 +299,8 @@ p {
   .submit-icon {
     width: 2.25rem;
   }
-  p {
-    font-size: 4.25rem;
+  .age-section p {
+    font-size: 4.5rem;
   }
   .line {
     bottom: 2.5rem;
