@@ -20,9 +20,12 @@ function calculateAge() {
 function showBirthDate() {
   if (calculateAge() !== false) {
     const age = calculateAge();
-    ageYear.textContent = age.years;
-    ageMonth.textContent = age.months;
-    ageDay.textContent = age.days;
+    const ageYear = new countUp.CountUp("ageYear", age.years, 3000);
+    const ageMonth = new countUp.CountUp("ageMonth", age.months, 3000);
+    const ageDay = new countUp.CountUp("ageDay", age.days, 3000);
+    ageDay.start();
+    ageMonth.start();
+    ageYear.start();
   } else {
     ageYear.textContent = "--";
     ageMonth.textContent = "--";
