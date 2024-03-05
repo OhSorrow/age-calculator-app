@@ -183,8 +183,7 @@ input {
   caret-color: hsl(var(--clr-purple));
 }
 
-input:focus,
-input:hover {
+input:focus {
   outline: none;
   border-color: hsl(var(--clr-purple));
 }
@@ -270,6 +269,13 @@ button:hover {
   position: relative;
   top: -1.5rem;
 }
+
+@media (hover: hover) {
+  input:hover {
+    border-color: hsl(var(--clr-purple));
+  }
+}
+
 /* Tablet layout */
 @media (min-width: 480px) {
   .container {
