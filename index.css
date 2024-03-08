@@ -225,8 +225,6 @@ button {
   z-index: 2;
   background-color: hsl(var(--clr-purple));
   align-items: center;
-  position: absolute;
-  bottom: -2.5rem;
 }
 
 button:hover {
@@ -243,7 +241,7 @@ button:hover {
   background-color: hsl(var(--clr-light-grey));
   height: 1px;
   position: absolute;
-  bottom: 0;
+  bottom: 1.85rem;
   z-index: 1;
 }
 
@@ -281,24 +279,31 @@ button:hover {
     border-color: hsl(var(--clr-purple));
   }
 }
-/* Mobile layout */
-@media (max-width: 480px) {
-  .age-section {
-    margin-top: 2rem;
-  }
-}
+
 /* Tablet layout */
 @media (min-width: 480px) {
   .container {
     padding: 3rem clamp(1.5rem, 5vw, 3rem);
     border-bottom-right-radius: 7.5rem;
   }
+
   button {
     padding: 0 1.25rem;
     align-self: end;
+    position: absolute;
+    bottom: -3.5rem;
   }
+
+  .age-section {
+    margin-top: 2rem;
+  }
+
   .age-section p {
     font-size: 4.5rem;
+  }
+
+  .line {
+    bottom: -1.5rem;
   }
 }
 /* Desktop layout */
@@ -317,6 +322,6 @@ button:hover {
     font-size: 5rem;
   }
   .line {
-    bottom: 0rem;
+    bottom: -1rem;
   }
 }
