@@ -24,81 +24,83 @@
     <script src="date.js" defer></script>
   </head>
   <body class="flex bg-light-grey">
-    <div class="container bg-white">
-      <form class="flex">
-        <ul class="flex all-inputs-container">
-          <li class="flex input-container">
-            <label
-              id="dayLabel"
-              for="day"
-              class="uppercase text-smokey-grey letter-spacing-4"
-              >day</label
-            >
-            <input
-              type="tel"
-              placeholder="DD"
-              id="day"
-              name="day"
-              maxlength="2"
-              class="text-off-black"
+    <main>
+      <div class="container bg-white">
+        <form class="flex">
+          <ul class="flex all-inputs-container">
+            <li class="flex input-container">
+              <label
+                id="dayLabel"
+                for="day"
+                class="uppercase text-smokey-grey letter-spacing-4"
+                >day</label
+              >
+              <input
+                type="tel"
+                placeholder="DD"
+                id="day"
+                name="day"
+                maxlength="2"
+                class="text-off-black"
+              />
+              <p id="dayError" class="error-text italic text-light-red"></p>
+            </li>
+            <li class="flex input-container">
+              <label
+                id="monthLabel"
+                for="month"
+                class="uppercase text-smokey-grey letter-spacing-4"
+                >month</label
+              >
+              <input
+                type="tel"
+                placeholder="MM"
+                id="month"
+                name="month"
+                maxlength="2"
+                class="text-off-black"
+              />
+              <p id="monthError" class="error-text italic text-light-red"></p>
+            </li>
+            <li class="flex input-container">
+              <label
+                id="yearLabel"
+                for="year"
+                class="uppercase text-smokey-grey letter-spacing-4"
+                >year</label
+              >
+              <input
+                type="tel"
+                placeholder="YYYY"
+                id="year"
+                name="year"
+                maxlength="4"
+                class="text-off-black"
+              />
+              <p id="yearError" class="error-text italic text-light-red"></p>
+            </li>
+          </ul>
+          <button onclick="showBirthDate()" type="button" class="flex">
+            <img
+              class="submit-icon"
+              src="./assets/images/icon-arrow.svg"
+              alt="submit icon"
             />
-            <p id="dayError" class="error-text italic text-light-red"></p>
-          </li>
-          <li class="flex input-container">
-            <label
-              id="monthLabel"
-              for="month"
-              class="uppercase text-smokey-grey letter-spacing-4"
-              >month</label
-            >
-            <input
-              type="tel"
-              placeholder="MM"
-              id="month"
-              name="month"
-              maxlength="2"
-              class="text-off-black"
-            />
-            <p id="monthError" class="error-text italic text-light-red"></p>
-          </li>
-          <li class="flex input-container">
-            <label
-              id="yearLabel"
-              for="year"
-              class="uppercase text-smokey-grey letter-spacing-4"
-              >year</label
-            >
-            <input
-              type="tel"
-              placeholder="YYYY"
-              id="year"
-              name="year"
-              maxlength="4"
-              class="text-off-black"
-            />
-            <p id="yearError" class="error-text italic text-light-red"></p>
-          </li>
-        </ul>
-        <button onclick="showBirthDate()" type="button" class="flex">
-          <img
-            class="submit-icon"
-            src="./assets/images/icon-arrow.svg"
-            alt="submit icon"
-          />
-        </button>
-        <div class="line"></div>
-      </form>
-      <section class="age-section">
-        <p class="fw-extra-bold italic">
-          <span id="ageYear" class="text-purple">-- </span> years
-        </p>
-        <p class="fw-extra-bold italic">
-          <span id="ageMonth" class="text-purple">--</span> months
-        </p>
-        <p class="fw-extra-bold italic">
-          <span id="ageDay" class="text-purple">-- </span> days
-        </p>
-      </section>
-    </div>
+          </button>
+          <div class="line"></div>
+        </form>
+        <section class="age-section">
+          <p class="fw-extra-bold italic">
+            <span id="ageYear" class="text-purple">-- </span> years
+          </p>
+          <p class="fw-extra-bold italic">
+            <span id="ageMonth" class="text-purple">--</span> months
+          </p>
+          <p class="fw-extra-bold italic">
+            <span id="ageDay" class="text-purple">-- </span> days
+          </p>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
