@@ -260,16 +260,16 @@ button:hover {
   visibility: hidden;
 }
 
-.age-section p {
+.age-section h1 {
   font-size: 3.5rem;
 }
 
-.age-section p:first-child {
+.age-section h1:first-child {
   position: relative;
   top: 1.5rem;
 }
 
-.age-section p:last-child {
+.age-section h1:last-child {
   position: relative;
   top: -1.5rem;
 }
@@ -298,7 +298,7 @@ button:hover {
     margin-top: 2rem;
   }
 
-  .age-section p {
+  .age-section h1 {
     font-size: 4.5rem;
   }
 
@@ -318,7 +318,7 @@ button:hover {
   .submit-icon {
     width: 2.25rem;
   }
-  .age-section p {
+  .age-section h1 {
     font-size: 5rem;
   }
   .line {
