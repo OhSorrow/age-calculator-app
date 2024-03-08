@@ -170,6 +170,10 @@ ol {
 body {
   font-family: var(--ff-sans-serif);
   min-height: 100dvh;
+  justify-content: center;
+}
+
+main{
   align-items: center;
 }
 
@@ -193,6 +197,7 @@ input:focus {
   margin: 0 auto;
   padding: 3rem 1rem;
   width: clamp(350px, 95vw, 690px);
+  max-height: 90vh;
 }
 
 .input-container {
